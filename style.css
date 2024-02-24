@@ -8,8 +8,7 @@
     font-family: 'poppins', sans-serif;
 }
 body{
-    color: #ededed;
-    background: #081b29;
+    color: #000;
 }
 
 a {
@@ -34,23 +33,25 @@ button {
 }
 
 .primary-btn {
-    padding: 15px 40px;
-    background: #7fc142;
+    padding: 15px 20px;
+    background: #fff;
     font-weight: bold;
-    color: white;
+    font-size: 15px;
+    color: #663399;
+    border-radius: 8px;
 }
 
 header {
     height: 10vh;
     line-height: 10vh;
     padding: 0 20px;
-    background: white;
+    background: #663399;
 }
 
 header .logo a {
     margin: 20px 0;
     font-size: 25px;
-    color: #081b29;
+    color: #fff;
     cursor: default;
     opacity: 0;
     animation: slideRight 1s ease forwards;
@@ -66,7 +67,7 @@ header ul li {
 }
 
 header ul li a {
-    color: #000;
+    color: #fff;
     margin: 0 10px;
     transition: 0.5s;
     opacity: 0;
@@ -75,11 +76,13 @@ header ul li a {
 }
 
 header ul li a:hover {
-    color: #7fc142;
+    color: #000;
 }
 
-header button {
-    padding: 13px 40px;
+header button:hover {
+    color: #fff;
+    background: #663399;
+    border: 2px solid #fff;
 }
 header .navlinks span {
     display: none;
@@ -92,7 +95,7 @@ header .navlinks span {
       left: 0;
       width: 100%;
       height: 100vh;
-      background: #009f7f;
+      background: #663399;
       overflow: hidden;
       transition: max-height 0.5s;
       text-align: center;
@@ -107,7 +110,7 @@ header .navlinks span {
       }
     
       header .navlinks span {
-        color: black;
+        color: white;
         display: block;
         cursor: pointer;
         line-height: 10vh;
@@ -122,7 +125,7 @@ header .navlinks span {
     height: 100vh;
     display: flex;
     align-items: center;
-    padding: 100px 10% 0;
+    padding: 201px 10% 0;
 }
 
 .home-content{
@@ -145,7 +148,7 @@ header .navlinks span {
 }
 
 .home-content h3 span{
-    color: #0ef;
+    color: #663399;
 }
 
 .home-content h1{
@@ -171,10 +174,10 @@ header .navlinks span {
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid #0ef;
+    border: 2px solid #663399;
     border-radius: 50%;
     font-size: 20px;
-    color: #0ef;
+    color: #663399;
     text-decoration: none;
     margin: 30px 15px 30px 0;
     transition: .5s ease;
@@ -184,18 +187,18 @@ header .navlinks span {
 }
 
 .home-sci a:hover{
-    background: #0ef;
+    background: #663399;
     color: #fff;
-    box-shadow: 0 0 20px #0ef;
+    box-shadow: 0 0 20px #663399;
 }
 
 .prsonal img{
     width: 600px;
     height: 600px;
     border-radius: 50%;
-    box-shadow: 0 0 5px cyan,
-    0 0 25px cyan, 0 0 50px cyan,
-    0 0 100px cyan, 0 0 200px cyan;
+    box-shadow: 0 0 5px #9370DB,
+    0 0 25px #9370DB, 0 0 50px #9370DB,
+    0 0 100px #9370DB, 0 0 200px #9370DB;
 }
 
 .about{
@@ -213,9 +216,9 @@ header .navlinks span {
     border-radius: 50%;
     margin-left: 50px; 
     margin-top: 50px; 
-    box-shadow: 0 0 5px cyan,
-    0 0 25px cyan, 0 0 50px cyan,
-    0 0 100px cyan, 0 0 200px cyan;
+    box-shadow: 0 0 5px #9370DB,
+    0 0 25px #9370DB, 0 0 50px #9370DB,
+    0 0 100px #9370DB, 0 0 200px #9370DB;
 }
 
 .about-text h2{
@@ -223,26 +226,23 @@ header .navlinks span {
 }
 
 .about-text h2 span{
-    color: #0ef;
+    color: #663399;
 }
 
 .about-text h4{
     font-size: 29px;
     font-weight: 600;
-    color: #fff;
     line-height: 1.7;
     margin: 15px 0 30px;
 }
 
 .about-text p{
-    color: aliceblue;
     font-size: 20px;
     line-height: 1.4;
     margin-bottom: 4rem;
 }
 
 #services{
-    color: aliceblue;
     font-size: 20px;
     line-height: 1.4rem;
     margin-bottom: 4rem;
@@ -256,7 +256,7 @@ header .navlinks span {
 }
 
 .sub-title span{
-    color: #0ef;
+    color: #663399;
 }
 
 .container{
@@ -278,7 +278,7 @@ header .navlinks span {
     border-right: 10px;
     border-radius: 20px;
     transition: background 0.5s, transform 0.5s;
-    box-shadow: 1px 1px 20px #0ef;
+    box-shadow: 1px 1px 20px #663399;
              
 }
 
@@ -313,7 +313,7 @@ header .navlinks span {
 }
 
 .main-text h2 span{
-    color: #0ef;
+    color: #663399;
 }
 
 .profolio-content{
@@ -340,7 +340,7 @@ header .navlinks span {
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.1), #0ef);
+    background: linear-gradient(rgba(0,0,0,0.1), #663399);
     position: absolute;
     border-radius: 8px;
     left: 0;
@@ -415,18 +415,16 @@ header .navlinks span {
 }
 
 .contact-text h2 span{
-    color: #0ef;
+    color: #663399;
 }
 
 .contact-text h4{
     margin: 15px 0;
-    color: rgb(228, 228, 228);
     font-size: 20px;
     font-weight: 600;
 }
 
 .contact-text p{
-    color: rgb(177, 177, 177);
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 2rem;
@@ -443,15 +441,15 @@ header .navlinks span {
 
 .contact-list i{
     display: inline-block;
-    color: #0ef;
+    color: #663399;
     font-size: 20px;
     font-weight: 600;
     transition: all .40s ease;
 }
 
-.contact-list li a:hover{
+.contact-list li:hover{
     transform: scale(1.01) translateY(-5px);
-    color: #0ef;
+    color: #663399;
 }
 
 .contact-icons i{
@@ -461,10 +459,10 @@ header .navlinks span {
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid #0ef;
+    border: 2px solid #663399;
     border-radius: 50%;
     font-size: 20px;
-    color: #0ef;
+    color: #663399;
     text-decoration: none;
     margin: 30px 15px 30px 0;
     transition: .5s ease;
@@ -474,15 +472,15 @@ header .navlinks span {
 }
 
 .contact-icons i:hover{
-    background: #0ef;
+    background: #663399;
     color: #000;
-    box-shadow: 0 0 20px #0ef;
+    box-shadow: 0 0 20px #9370DB;
 }
 .box{
     position: relative;
     width: 700px;
     height: 650px;
-    background: repeating-conic-gradient(from var(--a),#fff 0%, #fff 5%, transparent 5%, transparent 40%, #fff 50%);
+    background: repeating-conic-gradient(from var(--a),#663399 0%, #663399 5%, transparent 5%, transparent 40%, #663399 50%);
     animation: animate 4s linear infinite;
     border-radius: 20px;
 }
@@ -509,7 +507,7 @@ header .navlinks span {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: repeating-conic-gradient(from var(--a),#0ef 0%, #0ef 5%, transparent 5%, transparent 40%, #0ef 50%);
+    background: repeating-conic-gradient(from var(--a),#9370DB 0%, #9370DB 5%, transparent 5%, transparent 40%, #9370DB 50%);
     animation: animate 4s linear infinite;
     animation-delay: -1s;
     border-radius: 20px;
@@ -520,7 +518,7 @@ header .navlinks span {
     content: '';
     position: absolute;
     inset: 8px;
-    background: #081b29;
+    background: #fff;
     border-radius: 20px;
 }
 
@@ -552,7 +550,7 @@ header .navlinks span {
 .contact-form form .send{
     display: inline-block;
     padding: 14px 60px;
-    background: #0ef;
+    background: #663399;
     border-radius: 40px;
     font-size: 16px;
     color: #081b29;
@@ -562,13 +560,13 @@ header .navlinks span {
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: 2s;
-    box-shadow: 0 0 5px #0ef,
-    0 0 25px #0ef;
+    box-shadow: 0 0 5px #9370DB,
+    0 0 25px #9370DB;
 }
 .contact-form form .send:hover{
-    box-shadow: 0 0 5px cyan,
-    0 0 25px cyan, 0 0 50px cyan,
-    0 0 100px cyan, 0 0 200px cyan;
+    box-shadow: 0 0 5px #9370DB,
+    0 0 25px #9370DB, 0 0 50px #9370DB,
+    0 0 100px #9370DB, 0 0 200px #9370DB;
 }
 
 
