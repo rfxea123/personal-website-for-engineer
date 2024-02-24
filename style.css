@@ -12,44 +12,107 @@ body{
     background: #081b29;
 }
 
-.header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10%;
-    background: #051129;
+a {
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.flex_space{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    z-index: 100;
 }
-.logo{
-    position: relative;
+
+button {
+    border: none;
+    background: none;
+    outline: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.primary-btn {
+    padding: 15px 40px;
+    background: #7fc142;
+    font-weight: bold;
+    color: white;
+}
+
+header {
+    height: 10vh;
+    line-height: 10vh;
+    padding: 0 20px;
+    background: white;
+}
+
+header .logo a {
+    margin: 20px 0;
     font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
+    color: #081b29;
     cursor: default;
     opacity: 0;
     animation: slideRight 1s ease forwards;
 }
 
-.navbar a{
+header ul {
     display: inline-block;
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
+}
+
+header ul li {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+header ul li a {
+    color: #000;
+    margin: 0 10px;
+    transition: 0.5s;
     opacity: 0;
     animation: slideTop .5s ease forwards;
     animation-delay: calc(.2s *var(--i));
 }
 
-.navbar a:hover{
-    color: #0ef;
+header ul li a:hover {
+    color: #7fc142;
+}
+
+header button {
+    padding: 13px 40px;
+}
+header .navlinks span {
+    display: none;
+}
+
+@media only screen and (max-width:768px) {
+    header ul {
+      position: absolute;
+      top: 68px;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: #009f7f;
+      overflow: hidden;
+      transition: max-height 0.5s;
+      text-align: center;
+      z-index: 9;
+    }
+    header ul li {
+        display: block;
+      }
+    
+      header ul li a {
+        color: white;
+      }
+    
+      header .navlinks span {
+        color: black;
+        display: block;
+        cursor: pointer;
+        line-height: 10vh;
+        font-size: 25px;
+      }
 }
 
 .home{
@@ -57,12 +120,9 @@ body{
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    background: url(Purple\ Illustrated\ Mountain\ Desktop\ Wallpaper.png) no-repeat;
-    background-size: cover;
-    background-position: center;
     display: flex;
     align-items: center;
-    padding: 70px 10% 0;
+    padding: 100px 10% 0;
 }
 
 .home-content{
@@ -129,19 +189,33 @@ body{
     box-shadow: 0 0 20px #0ef;
 }
 
+.prsonal img{
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan;
+}
+
 .about{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 1.5rem;
+    margin-top: 130px;
 }
 
 .about-img img{
-    padding-bottom: 20%;
     max-width: 630px;
-    height: auto;
-    width: 100%;
-    border-radius: 8px;  
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    margin-left: 50px; 
+    margin-top: 50px; 
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan;
 }
 
 .about-text h2{
@@ -172,6 +246,7 @@ body{
     font-size: 20px;
     line-height: 1.4rem;
     margin-bottom: 4rem;
+    margin-top: 4rem;
 }
 
 .sub-title{
@@ -301,11 +376,27 @@ body{
     height: 100%;
 }
 
+.partner{  
+    position: relative;
+} 
+
 .partner-text{
     padding-top: 130px;
+    margin-bottom: 30px;
     text-align: center;
     font-size: 60px;
     line-height: 1;
+}
+
+.partner img {
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.partner .img{
+    position: relative;
+    margin: 20px;
 }
 
 .contact{
@@ -387,9 +478,55 @@ body{
     color: #000;
     box-shadow: 0 0 20px #0ef;
 }
+.box{
+    position: relative;
+    width: 700px;
+    height: 650px;
+    background: repeating-conic-gradient(from var(--a),#fff 0%, #fff 5%, transparent 5%, transparent 40%, #fff 50%);
+    animation: animate 4s linear infinite;
+    border-radius: 20px;
+}
+
+@property --a
+{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes animate{
+    0%{
+        --a: 0deg;
+    }
+    100%
+    {
+        --a:360deg;
+    }
+}
+
+.box::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(from var(--a),#0ef 0%, #0ef 5%, transparent 5%, transparent 40%, #0ef 50%);
+    animation: animate 4s linear infinite;
+    animation-delay: -1s;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.box::after{
+    content: '';
+    position: absolute;
+    inset: 8px;
+    background: #081b29;
+    border-radius: 20px;
+}
 
 .contact-form form{
     position: relative;
+    z-index: 2;
 }
 
 .contact-form form input, form textarea{
@@ -401,8 +538,10 @@ body{
     color: #000;
     font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5px;
     border-radius: 0.5rem;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
 .contact-form textarea{
